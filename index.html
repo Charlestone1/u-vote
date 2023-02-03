@@ -16,6 +16,7 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./pollstyles.css">
 
   <!--
     - google font link
@@ -35,7 +36,6 @@
     <div class="container">
 
       <a href="#" class="logo">
-        <!-- <img src="./assets/images/logo.jpeg" width="32" height="32" alt="iswap logo"> -->
         U-vote
       </a>
 
@@ -96,13 +96,15 @@
 
           <div class="hero-content">
 
-            <h1 class=" h1 hero-title">Blockchain Decentalized Voting Mechanism </h1>
+            <h1 class=" h1 hero-title">Blockchain Decentralized Voting Mechanism </h1>
 
             <p class="hero-text">
             U-vote is a Blockchain Decentalized Voting  Mechanism providing a secure, transparent, and tamper-proof ledger for recording and counting votes 
             </p>
 
-            <a href="#" class="btn btn-primary">Get started now</a>
+            <div class="butt-btn">
+              <a href="#" class="btn btn-primary">Get started now</a>
+            </div>
 
           </div>
 
@@ -113,10 +115,62 @@
         </div>
       </section>
 
+      <section class="section instruction polls-section" aria-label="instruction">
+        <div class="polls-container">
+          <h2 class="h2 section-title">Live Demo</h2>
+          <div class="wrapper">
+            <h3>Vote your favourite tutor in Learnable 22'</h3>
+            <div class="poll-area">
+              <label for="">
+                <div class="label-row">
+                  <div class="label-column">
+                    <span class="circle"></span>
+                    <span class="text">Livinus</span>
+                  </div>
+                  <span class="percentage">15%</span>
+                </div>
+                <span class="progress" style="--w:15;"></span>
+              </label>
+              <label for="">
+                <div class="label-row">
+                  <div class="label-column">
+                    <span class="circle"></span>
+                    <span class="text">SauceCode</span>
+                  </div>
+                  <span class="percentage">25%</span>
+                </div>
+                <span class="progress" style="--w:25;"></span>
+              </label>
+              <label for="">
+                <div class="label-row">
+                  <div class="label-column">
+                    <span class="circle"></span>
+                    <span class="text">Ernest</span>
+                  </div>
+                  <span class="percentage">20%</span>
+                </div>
+                <span class="progress" style="--w:20;"></span>
+              </label>
+              
+              <label for="">
+                <div class="label-row">
+                  <div class="label-column">
+                    <span class="circle"></span>
+                    <span class="text">JudiCodes</span>
+                  </div>
+                  <span class="percentage">40%</span>
+                </div>
+                <span class="progress" style="--w:40;"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section instruction" aria-label="instruction" >
         <div class="container">
 
-          <h2 class="h2 section-title">Use Case</h2>
+          <h2 class="h2 section-title">Core Values</h2>
 
           <p class="section-text">
             U-vote Is A Decentralized Voting Mechanism .
@@ -188,7 +242,7 @@
 
                
 
-                <h3 class="h3 card-title">Increased efficiency</h3>
+                <h3 class="h3 card-title">Efficiency</h3>
 
                 <p class="card-text">
                     Blockchain-based voting systems can automate many of the manual processes involved in traditional voting,.
@@ -264,6 +318,7 @@
     - custom js link
   -->
   <script src="./app.js" ></script>
+  <script src="./poll.js" ></script>
 
 
 

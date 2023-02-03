@@ -1,36 +1,31 @@
-
-'use strict';
+"use strict";
 
 /* Dark mode*/
 
 var icon = document.getElementById("icon");
 const connectButton = document.getElementById("connect");
 
-
-
 connectButton.addEventListener("click", async () => {
-    if (window.ethereum) {
-      try {
-        await window.ethereum.enable();
-        console.log("MetaMask is connected");
-        connectButton.innerHTML = "Connected";
-        connectButton.disabled = true;
-      } catch (error) {
-        console.error("User denied access to MetaMask");
-      }
-    } else {
-      console.error("MetaMask is not installed");
+  if (window.ethereum) {
+    try {
+      await window.ethereum.enable();
+      console.log("MetaMask is connected");
+      connectButton.innerHTML = "Connected";
+      connectButton.disabled = true;
+    } catch (error) {
+      console.error("User denied access to MetaMask");
     }
-  });
-  
-
-icon.onclick = function(){
-  document.body.classList.toggle("light-theme");
-  if(document.body.classList.contains("light-theme")){
-    icon.src="./assets/images/sun.png"
+  } else {
+    console.error("MetaMask is not installed");
   }
-  else {
-    icon.src="./assets/images/moon.png"
+});
+
+icon.onclick = function () {
+  document.body.classList.toggle("light-theme");
+  if (document.body.classList.contains("light-theme")) {
+    icon.src = "./assets/images/sun.png";
+  } else {
+    icon.src = "./assets/images/moon.png";
   }
 };
 
@@ -46,9 +41,7 @@ const addEventOnElem = function (elem, type, callback) {
   } else {
     elem.addEventListener(type, callback);
   }
-}
-
-
+};
 
 /**
  * navbar toggle
@@ -62,7 +55,7 @@ const toggleNavbar = function () {
   navbar.classList.toggle("active");
   navToggler.classList.toggle("active");
   document.body.classList.toggle("active");
-}
+};
 
 addEventOnElem(navToggler, "click", toggleNavbar);
 
@@ -70,11 +63,9 @@ const closeNavbar = function () {
   navbar.classList.remove("active");
   navToggler.classList.remove("active");
   document.body.classList.remove("active");
-}
+};
 
 addEventOnElem(navbarLinks, "click", closeNavbar);
-
-
 
 /**
  * header active
@@ -92,8 +83,6 @@ addEventOnElem(navbarLinks, "click", closeNavbar);
 
 // addEventOnElem(window, "scroll", activeHeader);
 
-
-
 // /**
 //  * toggle active on add to fav
 //  */
@@ -105,8 +94,6 @@ addEventOnElem(navbarLinks, "click", closeNavbar);
 // }
 
 // addEventOnElem(addToFavBtns, "click", toggleActive);
-
-
 
 /**
  * scroll revreal effect
@@ -127,6 +114,3 @@ addEventOnElem(navbarLinks, "click", closeNavbar);
 scrollReveal();
 
 addEventOnElem(window, "scroll", scrollReveal);
-
-
-
